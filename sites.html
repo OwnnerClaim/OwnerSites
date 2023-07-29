@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/jpeg" href="fundo/rosa.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+    <style>
+        body {
+            /* Caminho correto para a pasta e arquivo da imagem de fundo */
+            background-image: url('fundo/sakura.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            /* Aqui você pode adicionar animações ou transições */
+            /* animation: exemploAnimacao 10s infinite; Exemplo: animação de 10 segundos em loop infinito */
+            /* Estilos para o texto */
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Exemplo de animação personalizada apenas no nome */
+        @keyframes exemploAnimacao {
+            0% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+            100% { opacity: 0.2; transform: scale(1); }
+        }
+
+        /* Restante do seu CSS pode ser colocado aqui */
+        /* Por exemplo, estilos para o conteúdo da página */
+        h1 {
+            font-size: 48px;
+            text-align: center;
+            padding-top: 100px;
+            /* Estilo específico para o título */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            /* Cor do texto do título */
+            color: purple; /* Roxo */
+            animation: exemploAnimacao 5s infinite; /* Animação de 5 segundos em loop infinito */
+        }
+        p {
+            font-size: 24px;
+            text-align: center;
+            line-height: 1.6;
+            /* Estilo específico para o parágrafo */
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* Botão para ir para a página inicial */
+        .go-to-home-btn {
+            display: block;
+            width: 200px;
+            height: 50px;
+            background-color: purple;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            margin: 20px auto;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .go-to-home-btn:hover {
+            background-color: #7b68ee; /* Cor do botão ao passar o mouse */
+        }
+        .products-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo mais claro */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product {
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .product h2 {
+            font-size: 24px;
+            color: purple;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        .product p {
+            font-size: 16px;
+            color: #555;
+            text-align: center;
+        }
+        .product .buy-btn {
+            display: block;
+            width: 100%;
+            height: 40px;
+            background-color: purple;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .product .buy-btn:hover {
+            background-color: #7b68ee; /* Cor do botão ao passar o mouse */
+        }
+        /* Estilo para o container de partículas */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Partículas -->
+    <div id="particles-js"></div>
+
+    <h1>Loja</h1>
+    <!-- Botão para a página inicial -->
+    <a class="go-to-home-btn" href="index.html">Página Inicial</a>
+    <p></p>
+    <div class="products-container">
+        <div class="product">
+            <h2>Site HTML Simples e Barato</h2>
+            <p>Oferecemos um site HTML simples e barato para ajudar você a marcar presença online. Com um design limpo e elegante, seu site estará pronto para encantar seus clientes.</p>
+            <!-- Botão de compra -->
+            <a class="buy-btn" href="#">Comprar</a>
+        </div>
+        <div class="product">
+            <h2>Produto 2</h2>
+            <p>Descrição do Produto 2. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a class="buy-btn" href="#">Comprar</a>
+        </div>
+        <!-- Adicione mais produtos aqui -->
+    </div>
+
+    <!-- Script das partículas -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#e91e63" // Cor rosa das partículas
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 5,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffaec0", // Cor rosa das linhas
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
